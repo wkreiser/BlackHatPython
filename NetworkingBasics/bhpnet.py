@@ -71,7 +71,9 @@ def client_sender(buffer):
 
 
 def client_handler(client):
-    global upload, execute, command
+    global upload
+    global execute
+    global command
 
     # check for upload
     if len(upload_dest):
@@ -160,7 +162,12 @@ def run_command(command):
 
 
 def main():
-    global listen, port, execute, command, upload_dest, target
+    global listen
+    global port
+    global execute
+    global command
+    global upload_dest
+    global target
 
     if not len(sys.argv[1:]):
         usage()
