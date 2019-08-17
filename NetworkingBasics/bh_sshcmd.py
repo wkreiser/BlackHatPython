@@ -11,7 +11,7 @@ def ssh_command(ip, user, passwd, command):
 
     if ssh_session.active:
         ssh_session.exec_command(command)
-        print ssh_session.recv(1024)
+        print(ssh_session.recv(1024))
     return
 
 ssh_command('192.168.11.130', 'dev', '1q2w3e!Q@W#E', 'id')
